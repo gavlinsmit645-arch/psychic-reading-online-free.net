@@ -1,0 +1,104 @@
+/* Pro Theme — Design Tokens (2026) */
+:root {
+  /* Brand palette */
+  --color-primary:        #6D3FC3;
+  --color-primary-soft:   #9B72CF;
+  --color-primary-deep:   #3E1E7A;
+  --color-accent:         #4CAF50;
+  --color-accent-warm:    #F5B04A;
+
+  /* Surfaces */
+  --color-bg:             #FBFAFE;
+  --color-bg-alt:         #F4EDFC;
+  --color-surface:        #FFFFFF;
+  --color-surface-glass:  rgba(255,255,255,0.62);
+  --color-surface-dark:   #1A0F2E;
+  --color-surface-deep:   #0F0820;
+
+  /* Text */
+  --color-text:           #1C1530;
+  --color-text-mid:       #4A3F63;
+  --color-text-light:     #7B6F91;
+  --color-text-invert:    #F7F3FF;
+
+  /* Lines */
+  --color-border:         rgba(28,21,48,0.08);
+  --color-border-strong:  rgba(28,21,48,0.16);
+
+  /* Aurora gradients */
+  --grad-aurora:      linear-gradient(135deg, #8F5BFF 0%, #C68EFF 35%, #FFD27A 70%, #9B72CF 100%);
+  --grad-night:       linear-gradient(160deg, #0F0820 0%, #2A1558 55%, #5B2BA3 100%);
+  --grad-soft:        linear-gradient(180deg, #F8F2FF 0%, #FBFAFE 100%);
+  --grad-pill:        linear-gradient(90deg, #6D3FC3, #B47BFF);
+
+  /* Type */
+  --font-heading: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body:    'Nunito Sans', 'Segoe UI', sans-serif;
+  --fs-display:   clamp(2.6rem, 6.2vw, 4.8rem);
+  --fs-h1:        clamp(2.2rem, 4.8vw, 3.4rem);
+  --fs-h2:        clamp(1.8rem, 3.6vw, 2.6rem);
+  --fs-h3:        clamp(1.2rem, 2vw, 1.5rem);
+  --fs-body:      1.05rem;
+  --fs-small:     0.92rem;
+  --lh-tight:     1.15;
+  --lh-body:      1.7;
+
+  /* Layout */
+  --container-max:  1200px;
+  --container-pad:  24px;
+  --section-py:     clamp(56px, 9vw, 110px);
+
+  /* Radii */
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-xl: 40px;
+  --r-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 10px rgba(70, 35, 140, 0.06);
+  --shadow-md: 0 14px 40px rgba(70, 35, 140, 0.12);
+  --shadow-lg: 0 30px 80px rgba(70, 35, 140, 0.22);
+  --shadow-glow: 0 0 0 1px rgba(155,114,207,0.25), 0 20px 50px rgba(155,114,207,0.25);
+
+  /* Motion */
+  --ease:       cubic-bezier(0.22,0.61,0.36,1);
+  --t-fast:     0.18s var(--ease);
+  --t-med:      0.32s var(--ease);
+  --t-slow:     0.6s  var(--ease);
+}
+
+/* Base reset / typography */
+*,*::before,*::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img, svg { max-width: 100%; height: auto; display: block; }
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  color: var(--color-text);
+  margin: 0 0 .6em;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: 600; }
+p  { margin: 0 0 1rem; }
+a  { color: var(--color-primary); text-decoration: none; transition: color var(--t-fast); }
+a:hover { color: var(--color-primary-deep); }
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+::selection { background: rgba(109,63,195,0.2); }
