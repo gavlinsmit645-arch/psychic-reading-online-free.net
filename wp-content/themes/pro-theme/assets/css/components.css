@@ -22,7 +22,8 @@
 }
 .btn:hover { transform: translateY(-2px); }
 .btn--primary {
-  background: var(--grad-pill);
+  /* Білий текст залишається контрастним по всій ширині кнопки. */
+  background: linear-gradient(90deg, #6D3FC3, #7946C8);
   color: #fff;
   box-shadow: var(--shadow-glow);
 }
@@ -90,7 +91,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 0;
+  padding: 16px var(--container-pad);
 }
 .site-brand {
   font-family: var(--font-heading);
@@ -468,3 +469,27 @@ details.faq > *:not(summary) { padding: 0 24px 20px; color: var(--color-text-mid
   color: rgba(247,243,255,0.55);
 }
 .footer-bottom p { margin: 0; }
+
+/* Перемикач мов залишається доступним у шапці й мобільному меню. */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.lang-switch__current { font-weight: 700; }
+.lang-switch a { padding: 10px 4px; }
+.mobile-drawer .lang-switch { margin: 16px 12px 0; }
+.mobile-toggle { flex: 0 0 42px; }
+.site-brand__mark { flex-shrink: 0; }
+@media (max-width: 899px) {
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto 42px;
+    gap: 10px;
+  }
+  .site-header .site-brand { min-width: 0; gap: 8px; font-size: 0.94rem; }
+  .site-header .lang-switch { margin-right: 0; }
+}

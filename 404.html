@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="robots" content="noindex,nofollow">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page Not Found — Free Online Psychic Reading</title>
@@ -16,7 +17,7 @@ body{
   overflow:hidden;position:relative;
 }
 body::before{
-  content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+  content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;pointer-events:none;
   background:radial-gradient(ellipse at 30% 20%,#F5F5F544 0%,transparent 50%),
              radial-gradient(ellipse at 70% 80%,#4CAF5022 0%,transparent 50%);
   animation:drift 20s ease-in-out infinite alternate;z-index:0;

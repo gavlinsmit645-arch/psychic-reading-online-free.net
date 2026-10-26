@@ -278,9 +278,8 @@
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 700;
-  background: var(--grad-aurora);
-  -webkit-background-clip: text; background-clip: text;
-  color: transparent;
+  /* Контрастні числові показники на світлому тлі. */
+  color: var(--color-primary);
   line-height: 1;
   margin-bottom: 6px;
 }

@@ -7,4 +7,3 @@ Disallow: /xmlrpc.php
 Disallow: /go/
 
 Sitemap: https://psychic-reading-online-free.net/sitemap.xml
-Sitemap: https://th.psychic-reading-online-free.net/sitemap.xml
